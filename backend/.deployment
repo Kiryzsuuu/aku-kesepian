@@ -1,0 +1,9 @@
+# Azure App Service Configuration
+# This file is used by Azure App Service to configure the Python environment
+
+[build]
+  command = "pip install -r requirements.txt"
+
+[run]
+  command = "gunicorn --bind=0.0.0.0:$PORT --timeout 600 --workers 4 run:app"
+  working_directory = "/home/site/wwwroot/backend"

@@ -19,15 +19,28 @@ def create_app():
     app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'jwt-secret-key')
     app.config['JWT_ACCESS_TOKEN_EXPIRES'] = False  # Tokens don't expire automatically
     
-    # Initialize CORS
-    CORS(app, origins=[
+    # Initialize CORS - Support Azure domains
+    allowed_origins = [
         "http://localhost:3000",  # React dev server
         "http://127.0.0.1:3000",
+        "https://aku-frontend-bna0fncfc2crcjaf.indonesiacentral-01.azurewebsites.net",  # Azure Frontend
+        "https://aku-backend-h7aabeamdpb0gccp.indonesiacentral-01.azurewebsites.net",  # Azure Backend
         "https://*.azurestaticapps.net",  # Azure Static Web Apps
-        "https://*.azurewebsites.net",  # Azure App Service
+        "https://*.azurewebsites.net",  # Azure App Service wildcard
         "https://*.vercel.app",  # Vercel
-        os.getenv('FRONTEND_URL', 'http://localhost:3000')
-    ])
+    ]
+    
+    # Add frontend URL from environment
+    frontend_url = os.getenv('FRONTEND_URL')
+    if frontend_url and frontend_url not in allowed_origins:
+        allowed_origins.append(frontend_url)
+    
+    CORS(app, 
+         origins=allowed_origins,
+         supports_credentials=True,
+         allow_headers=["Content-Type", "Authorization"],
+         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    )
     
     # Initialize JWT
     jwt = JWTManager(app)
