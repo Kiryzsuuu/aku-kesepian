@@ -224,6 +224,26 @@ If you encounter any issues:
 - [ ] Chat export functionality
 - [ ] Multi-language support
 
+## 🚀 Deployment Options
+
+### Option 1: Vercel + Railway (Quickest)
+- **Frontend**: Vercel (Free)
+- **Backend**: Railway (Free tier available)
+- **Setup Time**: ~10 minutes
+- **Guide**: [VERCEL_DEPLOY.md](VERCEL_DEPLOY.md)
+
+### Option 2: Azure App Service (Production Ready)
+- **Frontend**: Azure Static Web Apps (Free)
+- **Backend**: Azure App Service (B1 ~$13/month)
+- **Setup Time**: ~15 minutes
+- **Guides**: 
+  - [AZURE_DEPLOY.md](AZURE_DEPLOY.md) - Detailed guide
+  - [AZURE_COMMANDS.md](AZURE_COMMANDS.md) - Quick CLI commands
+
+### Other Options
+- Heroku, Render, DigitalOcean, AWS
+- See [DEPLOYMENT.md](DEPLOYMENT.md) for details
+
 ## 💡 Tips
 
 - Use specific and emotional prompts for better AI responses
