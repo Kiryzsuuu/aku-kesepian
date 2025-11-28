@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "logging": {
+    "applicationLogging": {
+      "level": "information"
+    }
+  },
+  "routes": [
+    {
+      "source": "/*",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -23,6 +23,9 @@ def create_app():
     CORS(app, origins=[
         "http://localhost:3000",  # React dev server
         "http://127.0.0.1:3000",
+        "https://*.azurestaticapps.net",  # Azure Static Web Apps
+        "https://*.azurewebsites.net",  # Azure App Service
+        "https://*.vercel.app",  # Vercel
         os.getenv('FRONTEND_URL', 'http://localhost:3000')
     ])
     
