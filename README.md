@@ -1,12 +1,8 @@
 # Aku Kesepian 💕 - Your AI Companion
 
-> Chat dengan AI yang bisa jadi pacar, sahabat, keluarga, dan teman curhat yang selalu ada untukmu.
+Chat dengan AI yang bisa jadi pacar, sahabat, keluarga, dan teman curhat yang selalu ada untukmu.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge)](https://aku-kesepian.vercel.app)
-[![GitHub](https://img.shields.io/badge/github-repo-blue?style=for-the-badge&logo=github)](https://github.com/Kiryzsuuu/aku-kesepian)
-[![Deploy](https://img.shields.io/badge/deploy-vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
-
-## ✨ Fitur Utama
+## 🚀 Fitur Utama
 
 - **💕 Multiple AI Characters**: Pacar romantis, mama penyayang, papa pelindung, guru motivator, sahabat setia, kakak kece
 - **🔐 Authentication System**: Register, login, email verification, forgot password
@@ -42,18 +38,12 @@
 - Gmail account (for email service)
 - OpenAI API key
 
-## 📚 Documentation
-
-- **[Quick Start Guide](QUICKSTART.md)** - Deploy to Vercel & Railway in 10 minutes
-- **[Deployment Guide](DEPLOYMENT.md)** - Detailed deployment instructions
-- **[API Documentation](backend/README.md)** - Backend API reference
-
 ## 🔧 Installation & Setup
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/Kiryzsuuu/aku-kesepian.git
-cd aku-kesepian
+git clone <repository-url>
+cd "Webchat"
 ```
 
 ### 2. Backend Setup
